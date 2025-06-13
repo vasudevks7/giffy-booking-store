@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giffy - Salon Finder</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="left-section">
+            <span class="logo-text">Giffy</span>
+        </div>
+        <div class="right-section">
+            <a href="#" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">Location</a>
+            <a href="#" class="nav-link">Booked</a>
+            <div class="profile-dropdown">
+                <img src="profile.png" alt="Profile" class="profile-icon">
+                <div class="dropdown-content">
+                    <p>John Doe</p>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section with Background Image and Search Bar -->
+    <div class="hero-section">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for salons..." class="search-input">
+            <a href="search.html"></a><button class="search-button">Search</button></a>
+        </div>
+    </div>
+    <div>
+        <h1 class="head">Top Salons</h1>
+    </div>
+
+    <!-- Salon Cards Section -->
+    <div class="salon-cards">
+        <a href="salon.html">
+        <div class="card">
+                <img src="back3.jpg" alt="Salon 1" class="salon-image">
+                <div class="salon-details">
+                    <h3>Salon Name 1</h3>
+                    <p>123 Main Street, City</p>
+                    <p>📍 <a href="#">View Location</a></p>
+                    <p>⏰ 9:00 AM - 7:00 PM</p>
+                </div>
+            </div>
+        </a>
+        <a href="salon.html">
+            <div class="card">
+                <img src="saloon2.jpg" alt="Salon 2" class="salon-image">
+                <div class="salon-details">
+                    <h3>Salon Name 2</h3>
+                    <p>456 Elm Street, City</p>
+                    <p>📍 <a href="#">View Location</a></p>
+                    <p>⏰ 10:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+        </a>
+        <a href="salon.html">
+            <div class="card">
+                <img src="salon3.jpg" alt="Salon 3" class="salon-image">
+                <div class="salon-details">
+                    <h3>Salon Name 3</h3>
+                    <p>789 Oak Street, City</p>
+                    <p>📍 <a href="#">View Location</a></p>
+                    <p>⏰ 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Script for Search Functionality -->
+    <script>
+        document.querySelector('.search-button').addEventListener('click', function () {
+            document.querySelector('.hero-section').style.display = 'none';
+            document.querySelector('.salon-cards').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

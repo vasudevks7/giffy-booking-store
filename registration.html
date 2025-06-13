@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Registration - Giffy</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="top-nav">
+            <div class="nav-content">
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div class="logo">Giffy</div>
+            </div>
+        </nav>
+
+        <div class="registration-container">
+            <div class="form-header">
+                <h1>Register Your Salon</h1>
+                <p>Join our network of professional salons and grow your business</p>
+            </div>
+            
+            <form action="#" method="post" enctype="multipart/form-data">
+                <!-- Progress Steps -->
+                <div class="progress-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <span>Salon Details</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <span>Documents</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <span>Owner Details</span>
+                    </div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <span>Payment</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Salon Details -->
+                <div class="form-section active" id="step1">
+                    <div class="section-content">
+                        <div class="input-group">
+                            <label for="salonName">Salon Name</label>
+                            <input type="text" id="salonName" name="salonName" placeholder="Enter salon name" required>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="salonType">Salon Type</label>
+                                <select id="salonType" name="salonType" required>
+                                    <option value="">Select Type</option>
+                                    <option value="mens">Mens</option>
+                                    <option value="womens">Womens</option>
+                                    <option value="unisex">Unisex</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="phoneNo">Phone Number</label>
+                                <input type="tel" id="phoneNo" name="phoneNo" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="address" placeholder="Enter complete address" required></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="services">Services Offered</label>
+                            <textarea id="services" name="services" placeholder="List your salon services" required></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Operating Days</label>
+                            <div class="days-selector">
+                                <label class="day-chip">
+                                    <input type="checkbox" name="days[]" value="Sunday">
+                                    <span>Sun</span>
+                                </label>
+                                <label class="day-chip">
+                                    <input type="checkbox" name="days[]" value="Monday">
+                                    <span>Mon</span>
+                                </label>
+                                <label class="day-chip">
+                                    <input type="checkbox" name="days[]" value="Tuesday">
+                                    <span>Tue</span>
+                                </label>
+                                <label class="day-chip">
+                                    <input type="checkbox" name="days[]" value="Wednesday">
+                                    <span>Wed</span>
+                                </label>
+                                <label class="day-chip">
+                                    <input type="checkbox" name="days[]" value="Thursday">
+                                    <span>Thu</span>
+                                </label>
+                                <label class="day-chip">
+                                    <input type="checkbox" name="days[]" value="Friday">
+                                    <span>Fri</span>
+                                </label>
+                                <label class="day-chip">
+                                    <input type="checkbox" name="days[]" value="Saturday">
+                                    <span>Sat</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Opening Time</label>
+                                <input type="time" name="openTime" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Closing Time</label>
+                                <input type="time" name="closeTime" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Documents -->
+                <div class="form-section" id="step2">
+                    <div class="section-content">
+                        <div class="upload-section">
+                            <h3>Business License</h3>
+                            <div class="file-upload-container">
+                                <input type="file" id="license" name="license" accept=".pdf,.jpg,.jpeg,.png" required>
+                                <label for="license" class="upload-area">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload License</span>
+                                    <p class="upload-hint">PDF, JPG or PNG (Max 5MB)</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="upload-section">
+                            <h3>Salon Images</h3>
+                            <div class="image-grid">
+                                <div class="image-upload">
+                                    <input type="file" id="salonImage1" name="salonImages[]" accept="image/*" required>
+                                    <label for="salonImage1" class="image-upload-label">
+                                        <div class="image-preview" id="preview1">
+                                            <i class="fas fa-plus"></i>
+                                            <span>Add Image 1</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="image-upload">
+                                    <input type="file" id="salonImage2" name="salonImages[]" accept="image/*" required>
+                                    <label for="salonImage2" class="image-upload-label">
+                                        <div class="image-preview" id="preview2">
+                                            <i class="fas fa-plus"></i>
+                                            <span>Add Image 2</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="image-upload">
+                                    <input type="file" id="salonImage3" name="salonImages[]" accept="image/*" required>
+                                    <label for="salonImage3" class="image-upload-label">
+                                        <div class="image-preview" id="preview3">
+                                            <i class="fas fa-plus"></i>
+                                            <span>Add Image 3</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Owner Details -->
+                <div class="form-section" id="step3">
+                    <div class="section-content">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="ownerName">Owner Name</label>
+                                <input type="text" id="ownerName" name="ownerName" placeholder="Enter owner name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="ownerPhone">Owner Phone Number</label>
+                                <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="ownerEmail">Owner Email</label>
+                            <input type="email" id="ownerEmail" name="ownerEmail" placeholder="Enter email address" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Payment Details -->
+                <div class="form-section" id="step4">
+                    <div class="section-content">
+                        <div class="payment-section">
+                            <div class="section-header">
+                                <h3>Bank Account Details</h3>
+                                <button type="button" class="toggle-button" id="togglePayment">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="payment-details" id="paymentDetails">
+                                <div class="input-row">
+                                    <div class="input-group">
+                                        <label for="accountHolderName">Account Holder Name</label>
+                                        <input type="text" id="accountHolderName" name="accountHolderName" placeholder="Enter account holder name" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="bankName">Bank Name</label>
+                                        <input type="text" id="bankName" name="bankName" placeholder="Enter bank name" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="input-row">
+                                    <div class="input-group">
+                                        <label for="accountNumber">Account Number</label>
+                                        <input type="text" id="accountNumber" name="accountNumber" placeholder="Enter account number" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="ifscCode">IFSC Code</label>
+                                        <input type="text" id="ifscCode" name="ifscCode" placeholder="Enter IFSC code" required>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="upiId">UPI ID (Optional)</label>
+                                    <input type="text" id="upiId" name="upiId" placeholder="Enter UPI ID">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                    <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">Register Salon</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="registration.js"></script>
+</body>
+</html>

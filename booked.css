@@ -1,0 +1,49 @@
+/* Reset default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(210, 17%, 98%);
+    font-family: Arial, sans-serif;
+}
+
+/* Center container */
+.container {
+    text-align: center;
+    background-color: #3c5296;
+}
+.col{
+    background-color: #F3F4F7;
+    height: 400px;
+}
+
+/* Video Styling */
+.confirmation-video {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Booked Text Styling */
+.booked-text {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 70px;
+    color: #28a745;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giffy - Salon Management</title>
+    <link rel="stylesheet" href="salonpage.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="left-section">
+            <span class="logo-text">Giffy</span>
+        </div>
+        <div class="right-section">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">Location</a>
+            <div class="profile-dropdown">
+                <img src="profile.png" alt="Profile" class="profile-icon">
+                <div class="dropdown-content">
+                    <p>John Doe</p>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <!-- Salon Details Section -->
+        <div class="salon-details">
+            <h2>Salon Details</h2>
+            <div class="details">
+                <!-- Content will be dynamically populated -->
+                <p>Add Content dynamically</p>
+            </div>
+        </div>
+
+        <!-- Services Offered Section -->
+        <div class="services">
+            <h2>Services Offered</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="services-table">
+                    <!-- Services will be dynamically added here -->
+                </tbody>
+            </table>
+            <button class="add-button" onclick="addService()">Add New Service</button>
+        </div>
+
+        <!-- Employees Section -->
+        <div class="employees">
+            <h2>Employees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employees-table">
+                    <!-- Employees will be dynamically added here -->
+                </tbody>
+            </table>
+            <button class="add-button" onclick="addEmployee()">Add New Employee</button>
+        </div>
+
+        <!-- Booked List Section -->
+        <div class="booked-list">
+            <h2>Booked List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Needs</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="booked-table">
+                    <!-- Booked appointments will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Upcoming Appointments Section -->
+        <div class="appointments">
+            <h2>Upcoming Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Customer</th>
+                        <th>Service</th>
+                    </tr>
+                </thead>
+                <tbody id="upcoming-table">
+                    <!-- Upcoming appointments will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Accept Appointments Manually Section -->
+        <div class="accept-appointments">
+            <h2>Accept Appointments Manually</h2>
+            <form id="manual-appointment-form">
+                <div class="form-group">
+                    <label for="customer-name">Customer Name:</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service:</label>
+                    <select id="service" name="service" required>
+                        <!-- Services will be dynamically populated -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <button type="submit" class="submit-button">Accept Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="salonpage.js"></script>
+</body>
+</html>

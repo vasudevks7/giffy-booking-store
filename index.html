@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="container">
+        <div class="form-box">
+            <h2>Giffy</h2>
+            <form id="loginForm">
+                <div class="input-row">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" placeholder="Enter your username" required>
+                </div>
+                <div class="input-row">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <div class="button-row">
+                    <button type="button" onclick="window.location.href='signup.html'">Sign Up</button>
+                    <button type="submit">Login</button>
+                </div>
+                <div class="button-row">
+                    <a class="reg" href="registration.html"><br/>register as salon</a>
+                    <a class="reg" href=""><br/>Login as salon</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
